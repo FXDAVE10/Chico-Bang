@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Chico-Bang</title>
+        
+        <!-- Open Graph meta tags -->
+        <meta property="og:title" content="Explozive-direct" />
+        <meta property="og:description" content="Descoperă cele mai bune produse explozive!" />
+        <meta property="og:image" content="URL_CARE_PUNETI_IMAGINEA" />
+        <meta property="og:url" content="https://www.explozive-direct.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Explozive-direct" />
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #4d454557, #f8f6f6, #0b6e24);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animatie gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(59, 54, 54, 0.733);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #3caf96;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column-2, .column-3, .column-4 {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+    .column-2 h1, .column-2 p {
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .column-4 {
+        flex-basis: 100%;
+    }
+    .logo img {
+        width: 80px; /* Reduce dimensiunea logo-ului */
+    }
+    .header {
+        padding: 15px 0; /* Reduce padding pentru ecrane mai mici */
+    }
+}
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            nav ul li a:hover {
+                color: #3caf96;
+            }
+
+            /* Responsive Navbar */
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                }
+                nav ul {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+
+            /* Row and Column Styles */
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 30px 0;
+            }
+
+            .column-2 {
+                flex: 1;
+                min-width: 300px;
+                padding: 20px;
+            }
+
+            .column-2 h1 {
+                color: #fff;
+                font-size: 36px;
+            }
+
+            .column-2 p {
+                color: #fff;
+                font-size: 18px;
+                margin: 20px 0;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background: #39cfa5;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+
+            .btn:hover {
+                background: #033524;
+            }
+
+            /* Category Styles */
+            .categorii .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .column-3 {
+                flex-basis: 30%;
+                margin-bottom: 20px;
+            }
+
+            .column-3 img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            /* Recommended Products Section */
+            .small-container {
+                padding: 20px;
+            }
+
+            .column-4 {
+                flex-basis: 23%;
+                margin: 15px 0;
+                text-align: center;
+            }
+
+            .column-4 img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .ratting {
+                color: #ffd700;
+            }
+
+            /* Responsive Layout */
+            @media (max-width: 768px) {
+                .row {
+                    flex-direction: column;
+                }
+                .column-2 {
+                    text-align: center;
+                }
+                .column-4 {
+                    flex-basis: 48%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .column-4 {
+                    flex-basis: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Header Section -->
+        <div class="header"> 
+            <div class="container"> 
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="imagini/logo.png" alt="Logo"> 
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#"><img src="imagini/cart.png" alt="Cart" width="30" height="30"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="row"> 
+                    <div class="column-2">
+                        <h1>Slogan!</h1>
+                        <p>Descoperă cele mai bune produse explozive.</p>
+                        <a href="#" class="btn">Explorează acum &#8594;</a>
+                    </div>
+                    <div class="column-2">
+                        <img src="imagini/placeholder.jpg" alt="Description Image"> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Categories Section -->
+        <div class="categorii">
+            <div class="small-container">
+                <div class="row">
+                    <div class="column-3">
+                        <img src="imagini/category-1.jpg" alt="Category 1">
+                        <h4>Sub 1 gram, peste 1 gram, între 0,1 grame</h4>
+                    </div>
+                    <div class="column-3">
+                        <img src="imagini/category-2.jpg" alt="Category 2">
+                        <h4>Între 1-2 grame</h4>
+                    </div>
+                    <div class="column-3">
+                        <img src="imagini/category-3.jpg" alt="Category 3">
+                        <h4>(De la 2 grame)</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recommended Products Section -->
+<div class="small-container">
+    <h2 class="title">Produse Recomandate</h2>
+    <div class="row">
+        <div class="column-4">
+            <img src="imagini/produs-1.jpg" alt="Produs 1">
+            <h4>Nume Produs</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-2.jpg" alt="Produs 2">
+            <h4>Nume Produs</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-3.jpg" alt="Produs 3">
+            <h4>Nume Produs</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-4.jpg" alt="Produs 4">
+            <h4>Nume Produs</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei</p>
+        </div>
+    </div>
+    <h2 class="title"> Cele mai recente produse </h2>
+    <div class="row">
+        <div class="column-4">
+            <img src="imagini/produs-1.jpg" alt="Produs 1">
+            <h4>Fs-5/4 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 59 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-2.jpg" alt="Produs 2">
+            <h4>Super Alibaba /20 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 40</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-3.jpg" alt="Produs 3">
+            <h4>Banane Fs-2 </h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 99</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-4.jpg" alt="Produs 4">
+            <h4>Dog/40 buc </h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei:59.00 </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-4">
+            <img src="imagini/produs-5.jpg" alt="Produs 1">
+            <h4>Corsar 3-focuri/100 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 50 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-6.jpg" alt="Produs 2">
+            <h4> FS-3/20 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 55 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-7.jpg" alt="Produs 3">
+            <h4>Vampire/6 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 29</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-8.jpg" alt="Produs 4">
+            <h4>FP-3/20 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 59 </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-4">
+            <img src="imagini/produs-9.jpg" alt="Produs 1">
+            <h4>Dooom-boom TP-FS 101 0,8g/30 bucati</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 49 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-10.jpg" alt="Produs 2">
+            <h4>Explosive show 2g/10 buc </h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 49 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-11.jpg" alt="Produs 3">
+            <h4>Super Alibaba/40 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret lei: 39 </p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-12.jpg" alt="Produs 4">
+            <h4>Picolo Corsar/60 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 6</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-4">
+            <img src="imagini/produs-13.jpg" alt="Produs 1">
+            <h4>Banane FS-2 trei efecte /6 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Pret Lei: 99</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-14.jpg" alt="Produs 2">
+            <h4>Silver dream/1 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>nedefinit (in curand)</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-15.jpg" alt="Produs 3">
+            <h4>Mamba 1/20 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>nedefinit (in curand)</p>
+        </div>
+        <div class="column-4">
+            <img src="imagini/produs-16.jpg" alt="Produs 4">
+            <h4>Wolf 1/20 buc</h4>
+            <div class="rating"> <!-- Schimbat ratting în rating -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>nendefinit (in curand)</p>
+        </div>
+    </div>
+</div>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+            MenuItems.style.maxHeight = "200px";
+        } else {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+    </body>
+    </html>
